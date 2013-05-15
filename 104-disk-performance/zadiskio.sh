@@ -34,6 +34,18 @@ function usage()
 
 # Get source 
 SOURCE=`mount  | grep " $1 " | awk -F/ '{print $3}' | awk '{print $1}'`;
+if [[ "$SOURCE" == "mapper" ]]; then
+  SOURCE=`mount  | grep " $1 " | awk -F/ '{print $4}' | awk '{print $1}' `;
+#| awk -F- '{print $1}' `;
+#echo $SOURCE;
+#  SOURCE=` pvscan | grep $SOURCE | awk '{print $2}' | awk -F/ '{print $3}'`;
+  SOURCE=$(ls -ltra /dev/mapper/ | grep $SOURCE | awk '{print $5$6}');
+  TMP1=$(echo $SOURCE | awk -F, '{print $1}');
+  TMP2=$(echo $SOURCE | awk -F, '{print $2}');
+  SOURCE=$(cat /proc/diskstats | grep $TMP1 | grep "   $TMP2 " | awk '{print $3}');
+#echo $SOURCE;
+#exit
+fi
 # 
 
 if [[ $# ==  3 ]];then

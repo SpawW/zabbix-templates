@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2013-05-22T21:57:54Z</date>
+    <date>2013-05-22T21:46:31Z</date>
     <groups>
         <group>
             <name>100 - Linux</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>101_Apache_Performance</template>
-            <name>101_Apache_Performance</name>
+            <template>101_Apache_Performance_Externo</template>
+            <name>101_Apache_Performance_Externo</name>
             <groups>
                 <group>
                     <name>100 - Linux</name>
@@ -24,11 +24,11 @@
             <items>
                 <item>
                     <name>Aguardando conexões</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},WaitingForConnection]</key>
+                    <key>zapache.sh[{HOST.CONN},WaitingForConnection]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -63,11 +63,11 @@
                 </item>
                 <item>
                     <name>Apache/StartingUp.</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},StartingUp]</key>
+                    <key>zapache.sh[{HOST.CONN},StartingUp]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -102,11 +102,11 @@
                 </item>
                 <item>
                     <name>Bytes por requisição</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},BytesPerReq]</key>
+                    <key>zapache.sh[{HOST.CONN},BytesPerReq]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -141,11 +141,11 @@
                 </item>
                 <item>
                     <name>Bytes por segundo</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},BytesPerSec]</key>
+                    <key>zapache.sh[{HOST.CONN},BytesPerSec]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -180,11 +180,11 @@
                 </item>
                 <item>
                     <name>Conexões Fechando</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},ClosingConnection]</key>
+                    <key>zapache.sh[{HOST.CONN},ClosingConnection]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -219,11 +219,11 @@
                 </item>
                 <item>
                     <name>DNS Lookup</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},DNSLookup]</key>
+                    <key>zapache.sh[{HOST.CONN},DNSLookup]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -258,11 +258,11 @@
                 </item>
                 <item>
                     <name>Finalizações corretas</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},GracefullyFinishing]</key>
+                    <key>zapache.sh[{HOST.CONN},GracefullyFinishing]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -297,11 +297,11 @@
                 </item>
                 <item>
                     <name>Keep Alive</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},KeepAlive]</key>
+                    <key>zapache.sh[{HOST.CONN},KeepAlive]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -336,11 +336,11 @@
                 </item>
                 <item>
                     <name>Logging</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},Logging]</key>
+                    <key>zapache.sh[{HOST.CONN},Logging]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -375,11 +375,11 @@
                 </item>
                 <item>
                     <name>Reply enviados</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},SendingReply]</key>
+                    <key>zapache.sh[{HOST.CONN},SendingReply]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -414,11 +414,11 @@
                 </item>
                 <item>
                     <name>Requisições de leitura</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},ReadingRequest]</key>
+                    <key>zapache.sh[{HOST.CONN},ReadingRequest]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -453,11 +453,11 @@
                 </item>
                 <item>
                     <name>Requisições por segundo</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},ReqPerSec]</key>
+                    <key>zapache.sh[{HOST.CONN},ReqPerSec]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -492,11 +492,11 @@
                 </item>
                 <item>
                     <name>Slots abertos aguardando processo</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},OpenSlotWithNoCurrentProcess]</key>
+                    <key>zapache.sh[{HOST.CONN},OpenSlotWithNoCurrentProcess]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -531,11 +531,11 @@
                 </item>
                 <item>
                     <name>Total de acessos</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},TotalAccesses]</key>
+                    <key>zapache.sh[{HOST.CONN},TotalAccesses]</key>
                     <delay>1800</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -574,7 +574,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},Uptime]</key>
+                    <key>zapache.sh[{HOST.CONN},Uptime]</key>
                     <delay>1800</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -609,11 +609,11 @@
                 </item>
                 <item>
                     <name>Volume trafegado</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},TotalKBytes]</key>
+                    <key>zapache.sh[{HOST.CONN},TotalKBytes]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -648,11 +648,11 @@
                 </item>
                 <item>
                     <name>Workers - Disponíveis</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},IdleWorkers]</key>
+                    <key>zapache.sh[{HOST.CONN},IdleWorkers]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -687,11 +687,11 @@
                 </item>
                 <item>
                     <name>Workers - Processos de limpeza</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},IdleCleanupOfWorker]</key>
+                    <key>zapache.sh[{HOST.CONN},IdleCleanupOfWorker]</key>
                     <delay>600</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -726,11 +726,11 @@
                 </item>
                 <item>
                     <name>ZApache Version</name>
-                    <type>0</type>
+                    <type>10</type>
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>apache[{HOST.CONN},version]</key>
+                    <key>zapache.sh[{HOST.CONN},version]</key>
                     <delay>86400</delay>
                     <history>7</history>
                     <trends>180</trends>
@@ -772,7 +772,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{101_Apache_Performance:apache[{HOST.CONN},Uptime].change(0)}&lt;0</expression>
+            <expression>{101_Apache_Performance_Externo:zapache.sh[{HOST.CONN},Uptime].change(0)}&lt;0</expression>
             <name>O Apache foi reiniciado</name>
             <url/>
             <status>0</status>

@@ -12,7 +12,7 @@
 # Version: 1.4
 #
  
-zapachever="1.4"
+zapachever="1.5"
 rval=0
  
 function usage()
@@ -44,12 +44,19 @@ function usage()
 ########
 # Main #
 ########
+
+#set -x
+
  
 if [[ $# ==  1 ]];then
     #Agent Mode
     VAR=$(wget --quiet -O - http://localhost/server-status?auto)
     CASE_VALUE=$1
 elif [[ $# == 2 ]];then
+    #External Script Mode
+    VAR=$(wget --quiet -O - http://$1/server-status?auto)
+    CASE_VALUE=$2
+elif [[ $# == 3 ]];then
     #External Script Mode
     VAR=$(wget --quiet -O - http://$1/server-status?auto)
     CASE_VALUE=$2
@@ -60,9 +67,16 @@ else
 fi
  
 if [[ -z $VAR ]]; then
-    echo "ZBX_NOTSUPPORTED"
-    exit 1
+#  case $CASE_VALUE in
+#  'Uptime')
+#	echo "-1";
+#	rval=$?;;
+#  *)
+     echo "ZBX_NOTSUPPORTED"
+     exit 1;
+#  esac
 fi
+
  
 case $CASE_VALUE in
 'TotalAccesses')

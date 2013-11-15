@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2013-11-12T16:05:37Z</date>
+    <date>2013-11-15T22:59:30Z</date>
     <groups>
         <group>
             <name>000 - Sem Agente</name>

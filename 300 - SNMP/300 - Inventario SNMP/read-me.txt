@@ -1,0 +1,4 @@
+Parâmetros	: Não necessita
+Script		: Não necessita
+Macros		: {$SNMP_COMMUNITY} - Nome da comunidade SNMP
+Dependências	: Precisa do template 000 - Testes via ICMP

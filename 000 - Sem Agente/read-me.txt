@@ -1,0 +1,7 @@
+Parâmetros	: Não necessita
+Script		: Não necessita
+Macros		: {$QTD_PING} - Quantidade de pings a serem enviados
+		: {$TIMEOUT_PING} - Tempo máximo de aguardo para resposta de um PING (milisegundos)
+		: {$000_ICMP_LIMITE} - Quantidade mínima de falhas para gerar incidente
+		: {$000_ICMP_PERIODO} - Janela de tempo para analisar a geração do incidente de não resposta
+Dependências	: Não possui

@@ -45,6 +45,14 @@ if [[ "$SOURCE" == "mapper" ]]; then
   SOURCE=$(cat /proc/diskstats | grep $TMP1 | grep "   $TMP2 " | awk '{print $3}');
 #echo $SOURCE;
 #exit
+else
+ # Inicio 20/08/2014
+ # Adição feita por Werneck.costa@gmail.com
+ # Adição de condição caso o sistema utilize o esquema de discos por ID:
+ if [ "$SOURCE" == "disk" ]
+ then
+         SOURCE=$(blkid|grep -vi "swap"|grep `mount|grep " $1 "|grep "by-uuid"|cut -d '/' -f 5|cut -d ' ' -f 1`|cut -d ':' -f 1|cut -d '/' -f 3)
+ # Fim 20/08/2014 - Werneck
 fi
 # 
 

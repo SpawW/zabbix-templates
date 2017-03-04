@@ -15,9 +15,9 @@ ZBX_VER="3.2.3";
 WWW_PATH="/var/www/html/";
 
 # Instala Zabbix Server
-SERVER="N";
+SERVER="S";
 # Instala Zabbix Proxy
-PROXY="S";
+PROXY="N";
 
 read -p "Instalar o servidor Zabbix: " -e -i "$SERVER" SERVER
 read -p "Instalar o proxy Zabbix: " -e -i "$PROXY" PROXY

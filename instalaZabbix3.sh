@@ -135,7 +135,7 @@ if [ $SERVER == "S" ]; then
 	chkconfig --level 35 zabbix_server on
 	
 	# Mudando banco e senha para o novo nome do zbx3 para testes
-	curl -s https://raw.githubusercontent.com/zabbix-brasil/livrozabbix2014/master/Capitulo_2/criaConfServer.sh -o /install/criaConfServer.sh
+	wget https://raw.githubusercontent.com/zabbix-brasil/livrozabbix2014/master/Capitulo_2/criaConfServer.sh -O /install/criaConfServer.sh
 	sed -i "s/zabbix-2./zabbix-3./g"  /install/criaConfServer.sh
 	sed -i "s/zbx_db/$NOMEBANCO/g" /install/criaConfServer.sh
 	sed -i "s/creative2014/$SENHA/g" /install/criaConfServer.sh
@@ -177,7 +177,7 @@ fi
 
 # Baixando os scripts de configuracao do agente e do servidor, conforme livro
 cd /install
-curl -s https://raw.githubusercontent.com/zabbix-brasil/livrozabbix2014/master/Capitulo_2/configuraAgente.sh -o  configuraAgente.sh
+wget https://raw.githubusercontent.com/zabbix-brasil/livrozabbix2014/master/Capitulo_2/configuraAgente.sh -O  configuraAgente.sh
 sed -i "s/zabbix-2./zabbix-3./g"   configuraAgente.sh
 sh configuraAgente.sh
 chkconfig --add zabbix_agentd

@@ -11,7 +11,7 @@
 
 PHPINI="/etc/php.ini"
 # Padrao para producao
-ZBX_VER="3.2.1";
+ZBX_VER="3.2.3";
 WWW_PATH="/var/www/html/";
 
 # Instala Zabbix Server
@@ -56,7 +56,8 @@ cd /install
 #URL_DOWN="http://ufpr.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/$ZBX_VER/zabbix-$ZBX_VER.tar.gz";
 URL_DOWN="http://netix.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/$ZBX_VER/zabbix-$ZBX_VER.tar.gz";
 
-curl $URL_DOWN -o zabbix.tgz
+#curl $URL_DOWN -o zabbix.tgz
+wget $URL_DOWN -O zabbix.tgz
 # Versao desenvolvimento
 tar -xzvf zabbix.tgz
 
